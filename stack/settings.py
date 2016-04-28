@@ -8,7 +8,12 @@
 #     http://doc.scrapy.org/en/latest/topics/settings.html
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
+ITEM_PIPELINES = ['stack.pipelines.MongoDBPipeline', ]
 
+MONGODB_SERVER = "localhost"
+MONGODB_PORT = 27017
+MONGODB_DB = "stackoverflow"
+MONGODB_COLLECTION = "questions"
 BOT_NAME = 'stack'
 
 SPIDER_MODULES = ['stack.spiders']
